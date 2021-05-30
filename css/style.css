@@ -259,6 +259,50 @@ body ul {
   }
 }
 
+.wrapper main .circle3 {
+  top: auto;
+  left: -130px;
+  bottom: -100px;
+  background-color: #1f4;
+}
+
+@media (max-width: 1380px) {
+  .wrapper main .circle3 {
+    top: auto;
+    left: -130px;
+    bottom: -100px;
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper main .circle3 {
+    width: 240px;
+    height: 240px;
+    bottom: -200px;
+  }
+}
+
+.wrapper main .circle4 {
+  top: auto;
+  left: auto;
+  bottom: -250px;
+  right: -250px;
+  background-color: #dd4;
+}
+
+@media (max-width: 1380px) {
+  .wrapper main .circle4 {
+    top: auto;
+    left: auto;
+    bottom: -250px;
+    right: -250px;
+    width: 400px;
+    height: 400px;
+  }
+}
+
 .wrapper main .container {
   max-width: 1000px;
   margin: 0px auto;
@@ -536,6 +580,9 @@ body ul {
   width: 80%;
   height: 30px;
   padding: 5px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #111;
   font-size: 17px;
   margin: 10px 0px;
 }
@@ -543,6 +590,9 @@ body ul {
 .wrapper main section .form textarea {
   font-size: 17px;
   width: 80%;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #111;
   min-width: 80%;
   max-width: 80%;
   margin: 10px auto;
