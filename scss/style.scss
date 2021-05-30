@@ -19,6 +19,7 @@ body {
         width: 100%;
         z-index: 100;
         min-height: 100vh;
+        background-attachment: fixed;
         position: relative;
         .top {
             padding: 5px 15px;
@@ -52,8 +53,10 @@ body {
                 ul {
                     display: flex;
                     list-style: none;
-                    li {
+                    li a {
                         text-transform: capitalize;
+                        text-decoration: none;
+                        color: #ffffff90;
                         font-weight: bold;
                         padding: 5px;
                         transition: all ease-out 0.3s;
@@ -128,7 +131,7 @@ body {
             .title-container {
                 z-index: -1;
                 width: 100%;
-                background: #11111197;
+                background: #11111190;
                 box-shadow: 0px 0px 30px #111;
                 top: 50%;
                 padding: 5px 10px;
@@ -236,9 +239,9 @@ body {
                     margin: 10px;
                     transition: all ease-out 0.4s;
                     border: 1px solid #111;
-                    &:not(.notwhite):hover {
-                        color: #fff;
-                    }
+                    // &:not(.notwhite):hover {
+                    // color: #fff;
+                    // }
                     &:hover {
                         transform: scale(1.03);
                     }
@@ -255,6 +258,9 @@ body {
                 margin: 0px auto;
                 flex-wrap: wrap;
                 counter-reset: myworks;
+                @media (max-width: 1221px) {
+                    justify-content: center;
+                }
                 .work {
                     background: #222;
                     border: 2px solid #110;
@@ -282,8 +288,11 @@ body {
                         position: absolute;
                     }
                     .work-img {
-                        width: 100%;
-                        height: 210px;
+                        display: block;
+                        max-width: 100%;
+                        height: auto;
+                        margin-top: 10px;
+                        // height: 210px;
                         cursor: pointer;
                     }
                     .work-title {
@@ -321,18 +330,26 @@ body {
             .soc-media {
                 max-width: 50%;
                 // background: #41f;
-                margin: 20px auto;
+                // margin: 20px auto;
+                margin-top: 40px;
+                @media (max-width: 950px) {
+                    width: 100%;
+                    max-width: 100%;
+                }
             }
             .soc-media-ul {
                 list-style: none;
                 display: flex;
+                margin: 0px auto;
+                width: auto;
                 flex-direction: column;
                 font-size: 18px;
                 li {
                     margin: 10px 0px;
                     font-weight: bold;
                     display: block;
-                    width: 100%;
+                    max-width: 100%;
+                    white-space: nowrap;
                     padding: 10px;
                     background: #11111140;
                     border-radius: 30px;
@@ -344,6 +361,18 @@ body {
                         font-style: italic;
                         text-decoration: underline;
                     }
+                    @media (max-width: 950px) {
+                        width: 80%;
+                    }
+                    @media (max-width: 450px) {
+                        font-size: 14px;
+                    }
+                }
+                @media (max-width: 950px) {
+                    align-items: center;
+                }
+                @media (max-width: 690px) {
+                    // width: 60vw;
                 }
             }
             .form {
@@ -381,6 +410,9 @@ body {
                     max-width: 80%;
                     margin: 10px auto;
                 }
+                @media (max-width: 550px) {
+                    width: 95%;
+                }
             }
             .sendbtn {
                 margin-top: 30px;
@@ -404,6 +436,17 @@ body {
                 padding-top: 25px;
                 .s-hr {
                     background: #fff;
+                }
+            }
+        }
+        .contact {
+            display: flex;
+            @media (max-width: 950px) {
+                flex-direction: column;
+            }
+            @media (max-width: 800px) {
+                .soc-media-ul {
+                    min-width: auto;
                 }
             }
         }
@@ -431,6 +474,15 @@ body {
                     margin-top: 10px;
                 }
             }
+        }
+        @media (max-width: 590px) {
+            flex-direction: column;
+            .info {
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 400px) {
+            font-size: 14px;
         }
     }
 }
