@@ -123,6 +123,13 @@ body ul {
   width: 40px;
   cursor: pointer;
   margin-right: 25px;
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.wrapper header .top .social-media li img:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .wrapper header .top .burger {
@@ -135,6 +142,19 @@ body ul {
   position: relative;
   -webkit-transition: all ease-out 0.4s;
   transition: all ease-out 0.4s;
+}
+
+.wrapper header .top .burger span::before {
+  -webkit-transition: all ease-out 0.4s;
+  transition: all ease-out 0.4s;
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 75%;
+  background-color: #fff;
+  top: 24px;
+  left: 6px;
 }
 
 @media (max-width: 1175px) {
@@ -152,12 +172,18 @@ body ul {
   height: 3px;
   width: 75%;
   background-color: #fff;
-  top: 15px;
+  top: 13px;
   left: 6px;
 }
 
 .wrapper header .top .burger::after {
   top: 35px;
+}
+
+.wrapper header .top .burger.active span::before {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
 }
 
 .wrapper header .top .burger.active::before {
@@ -449,6 +475,7 @@ body ul {
   font-size: 22px;
   font-weight: bold;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .wrapper main section .works .work hr {
