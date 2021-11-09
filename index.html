@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vazgen Manaseryan</title>
+    <link rel="icon" href="./imges/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -56,12 +57,22 @@
                     <div class="s-title">About Me</div>
                     <hr class="s-hr">
                     <div class="s-body about">
-                        Hi everyone, my name is Vazgen and am a beginner developer. I am 17. I started to learn
-                        programming when I was 14. I started to learn HTML, CSS, Javascript. After that I decided to
-                        learn Angular as a JS framework. I worked with this framework a little bit. I did some small
-                        projects with Angular. Then I decided to change my general JS framework I started to learn
-                        React, because it was the most popular JS framework. So I also worked with React Native, because
-                        I really like to do mobile apps. <i>To be continue...</i>
+                        <p class="body-text">
+                            Hi everyone, my name is Vazgen and am a beginner developer. I am 17. I started to learn
+                            programming when I was 14. I started to learn HTML, CSS, Javascript. After that I decided to
+                            learn Angular as a JS framework. I worked with this framework a little bit. I made some
+                            small
+                            projects with Angular. Then I decided to change my general JS framework I started to learn
+                            React, because it was the most popular JS framework. So I also worked with React Native,
+                            because
+                            I really like to make mobile apps. <i>To be continue...</i>
+                            <br>
+                            <br>
+                            <a href="https://drive.google.com/file/d/1JzFZKEMhvOwiJQxnVOT6WuOxGuHyElek/view?usp=sharing"
+                                target="_blank" style="font-size: 22px;">
+                                See My CV
+                            </a>
+                        </p>
                     </div>
                 </section>
                 <section id="skills">
@@ -72,19 +83,18 @@
                             <li data-color="#EF8354" class="skill">HTML</li>
                             <li data-color="#2465F1" class="skill">CSS</li>
                             <li data-color="#F7E22D" class="skill notwhite">JavaScript</li>
-                            <li data-color="#151515" class="skill">Git / Github</li>
                             <li data-color="#CC6699" class="skill">Sass / Scss</li>
+                            <li data-color="#151515" class="skill">Git / Github</li>
                         </ul>
                         <p class="small-title">Some Knowledges</p>
                         <hr class="s-hr">
                         <ul class="skills-ul">
-                            <li data-color="#0178D9" class="skill">Azure Devops</li>
-                            <li data-color="#367CC8" class="skill">TypeScript</li>
-                            <li data-color="#78B360" class="skill">Node Js</li>
-                            <li data-color="#EEEEEE" class="skill notwhite">Express</li>
-                            <li data-color="#E4325A" class="skill">Angular</li>
                             <li data-color="#61DAFB" class="skill">React Js</li>
                             <li data-color="#61DAFB" class="skill">React Native</li>
+                            <li data-color="#E4325A" class="skill">Angular</li>
+                            <li data-color="#78B360" class="skill">Node Js</li>
+                            <li data-color="#EEEEEE" class="skill notwhite">Express</li>
+                            <li data-color="#367CC8" class="skill">TypeScript</li>
                         </ul>
                     </div>
                 </section>
@@ -93,9 +103,36 @@
                 <div class="s-title">My Works</div>
                 <hr class="s-hr">
                 <div class="s-body">
+                    <div class="works-filter">
+                        <div class="filter active">All</div>
+                        <div class="filter">Easy</div>
+                        <div class="filter">Medium</div>
+                        <div class="filter">Dificult</div>
+                        <div class="filter">Paid</div>
+                    </div>
                     <div class="works">
 
-                        <div class="work">
+                        <div class="work" data-filter="paid">
+                            <img src="./imges/lucky-cards.jpg" alt="" class="work-img">
+                            <div class="work-title">Lucky cards</div>
+                            <hr>
+                            <br>
+                            <a href="https://github.com/vazgenM2/lucky-cards" target="_blank">
+                                <button class="work-btn">See</button>
+                            </a>
+                        </div>
+
+                        <div class="work" data-filter="paid">
+                            <img src="./imges/woman-body.jpg" alt="" class="work-img">
+                            <div class="work-title">Woman's model</div>
+                            <hr>
+                            <br>
+                            <a href="https://github.com/vazgenM2/woman-body-model" target="_blank">
+                                <button class="work-btn">See</button>
+                            </a>
+                        </div>
+
+                        <div class="work" data-filter="medium">
                             <img src="./imges/rps.jpg" alt="" class="work-img">
                             <div class="work-title">Todo app in ReactJS</div>
                             <hr>
@@ -105,7 +142,7 @@
                             </a>
                         </div>
 
-                        <div class="work">
+                        <div class="work" data-filter="dificult">
                             <img src="./imges/chess.png" alt="" class="work-img">
                             <div class="work-title">The Chess</div>
                             <hr>
@@ -114,7 +151,7 @@
                                 <button class="work-btn">See</button>
                             </a>
                         </div>
-                        <div class="work">
+                        <div class="work" data-filter="medium">
                             <img src="./imges/5inarow.jpg" alt="" class="work-img">
                             <div class="work-title">5 In A Row</div>
                             <hr>
@@ -123,7 +160,7 @@
                                 <button class="work-btn">See</button>
                             </a>
                         </div>
-                        <div class="work">
+                        <div class="work" data-filter="easy">
                             <img src="./imges/colc.jpg" alt="" class="work-img">
                             <div class="work-title">Calculator</div>
                             <hr>
@@ -134,7 +171,7 @@
                             </a>
                         </div>
 
-                        <div class="work">
+                        <div class="work" data-filter="easy">
                             <img src="./imges/facebook.jpg" alt="" class="work-img">
                             <div class="work-title">Facebook Sign in Design</div>
                             <hr>
@@ -144,7 +181,7 @@
                             </a>
                         </div>
 
-                        <div class="work">
+                        <div class="work" data-filter="easy">
                             <img src="./imges/rps.jpg" alt="" class="work-img">
                             <div class="work-title">Rock, Paper, Scissors</div>
                             <hr>
@@ -205,7 +242,7 @@
                 </ul>
             </div>
             <div class="default-text">
-                <p>Vazgen Manaseryan website</p>
+                <p>Vazgen Manaseryan's website</p>
                 <p>© All rights reserved, 2021</p>
             </div>
         </footer>
