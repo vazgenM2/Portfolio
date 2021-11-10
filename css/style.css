@@ -432,6 +432,13 @@ body ul {
   border-bottom: 1px solid #00000090;
 }
 
+@media (max-width: 500px) {
+  .wrapper main section .works-filter {
+    padding: 10px 30px 20px 0;
+    overflow-x: scroll;
+  }
+}
+
 .wrapper main section .works-filter .filter {
   width: auto;
   padding: 10px 15px;
@@ -474,6 +481,16 @@ body ul {
   background: #222;
   border: 2px solid #110;
   max-width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px 5px;
   border-radius: 10px;
   margin: 20px;
@@ -507,9 +524,12 @@ body ul {
 .wrapper main section .works .work .work-img {
   display: block;
   max-width: 100%;
-  height: auto;
   margin-top: 10px;
+  height: 210px;
   cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .wrapper main section .works .work .work-title {
@@ -517,6 +537,7 @@ body ul {
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
+  justify-self: flex-end;
 }
 
 .wrapper main section .works .work hr {
@@ -524,6 +545,7 @@ body ul {
   height: 2px;
   background: #fff;
   border: none;
+  justify-self: flex-end;
 }
 
 .wrapper main section .works .work .work-desk {
@@ -532,6 +554,7 @@ body ul {
 }
 
 .wrapper main section .works .work .work-btn {
+  justify-self: flex-end;
   width: 150px;
   height: 40px;
   border-radius: 10px;

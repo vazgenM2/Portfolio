@@ -318,6 +318,10 @@ body {
                 background-color: #101010;
                 border-top: 1px solid #00000090;
                 border-bottom: 1px solid #00000090;
+                @media (max-width: 500px) {
+                    padding: 10px 30px 20px 0;
+                    overflow-x: scroll;
+                }
                 .filter {
                     width: auto;
                     padding: 10px 15px;
@@ -347,6 +351,9 @@ body {
                     background: #222;
                     border: 2px solid #110;
                     max-width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     //min-height: 450px;
                     padding: 10px 5px;
                     border-radius: 10px;
@@ -372,28 +379,31 @@ body {
                     .work-img {
                         display: block;
                         max-width: 100%;
-                        height: auto;
                         margin-top: 10px;
-                        // height: 210px;
+                        height: 210px;
                         cursor: pointer;
+                        align-self: center;
                     }
                     .work-title {
                         font-size: 22px;
                         font-weight: bold;
                         cursor: pointer;
                         margin-top: 10px;
+                        justify-self: flex-end;
                     }
                     hr {
                         width: 90%;
                         height: 2px;
                         background: #fff;
                         border: none;
+                        justify-self: flex-end;
                     }
                     .work-desk {
                         max-width: 90%;
                         margin: 0px auto;
                     }
                     .work-btn {
+                        justify-self: flex-end;
                         width: 150px;
                         height: 40px;
                         border-radius: 10px;
