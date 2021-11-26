@@ -229,6 +229,8 @@ body ul {
   font-size: 60px;
   max-width: 65%;
   margin: 0px auto;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (max-width: 871px) {

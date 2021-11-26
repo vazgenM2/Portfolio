@@ -84,3 +84,16 @@ window.onload = function () {
         }
     }
 }
+
+//  Add .parallax to create parallax effect to some elements
+document.addEventListener('mousemove', e => {
+    document.querySelectorAll('.parallax').forEach(item => {
+        let speed = 1
+        // Math.random() * 10 - Math.random() * 10
+        const x = (window.innerWidth - e.pageX * speed) / 10
+        const y = (window.innerHeight - e.pageY * speed) / 10
+
+
+        item.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+})
