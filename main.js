@@ -1,8 +1,78 @@
-window.onload = function () {
+window.onload = async function () {
     let skills = document.querySelectorAll('.skill')
-    let burger = document.querySelector('.burger')
+    // let burger = document.querySelector('.burger')
     let filterBtns = document.querySelectorAll('.filter')
     let allWorks = document.querySelectorAll('.work')
+
+    // ============================================ Get my age
+    let nowDate = new Date()
+    let myDate = new Date(2004, 7, 15)
+    let ms = nowDate - myDate
+    let myAge = 0
+    while (ms >= 31557600000) {
+        myAge++
+        ms -= 31557600000
+    }
+    document.querySelector('#age').innerHTML = myAge
+    //  ======================================================
+    //  ================== Generateing works/projects
+    let onePageCount = 5
+    let currentPage = 1
+    let allPages = 1
+    let projectI = 0
+    let fixedProjectI = 0
+    await fetch('./projects.json')
+        .then(res => res.json())
+        .then(res => {
+            allPages = Math.ceil(res.projects.length / onePageCount)
+            while (currentPage <= allPages) {
+                fixedProjectI = projectI
+                console.log(currentPage)
+                let works = document.createElement('div')
+                let pageBtn = document.createElement('div')
+                works.classList.add('works')
+                works.classList.add(`sheet-${currentPage}`)
+                pageBtn.classList.add('page-btn')
+                pageBtn.innerHTML = currentPage
+                pageBtn.id = currentPage
+                if (currentPage === 1) works.classList.add('active')
+
+                for (projectI; projectI < fixedProjectI + onePageCount; projectI++) {
+                    if (!res.projects[projectI]) break
+                    let newProject = document.createElement('div')
+                    let inner = `
+                    <div class="work" data-filter="${res.projects[projectI].filter}">
+                    <img src="${res.projects[projectI].imgSrc}" alt="" class="work-img">
+                    <div>
+                        <div class="work-title">${res.projects[projectI].name}</div>
+                        <hr>
+                        <br>
+                        <a href="${res.projects[projectI].btnLink}" target="_blank">
+                        <button class="work-btn">See</button>
+                        </a>
+                        </div>
+                        </div>
+                        `
+                    newProject.innerHTML = inner
+                    works.appendChild(newProject)
+
+                }
+
+                document.querySelector('.choose-pages').appendChild(pageBtn)
+                document.querySelector('.all-projects').appendChild(works)
+                currentPage++
+            }
+        })
+
+    for (let i = 0; i < document.querySelectorAll('.page-btn').length; i++) {
+        document.querySelectorAll('.page-btn')[i].addEventListener('click', () => {
+            for (let j = 0; j < document.querySelectorAll('.works').length; j++) {
+                document.querySelectorAll('.works')[j].classList.remove('active')
+            }
+            document.querySelector(`.sheet-${document.querySelectorAll('.page-btn')[i].id}`).classList.add('active')
+            console.log(document.querySelectorAll('.page-btn')[i].id)
+        })
+    }
 
     for (let skill of skills) {
         skill.style.boxShadow = `0px 0px 4px ${skill.getAttribute('data-color')}`
@@ -19,9 +89,9 @@ window.onload = function () {
         })
     }
 
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active')
-    })
+    // burger.addEventListener('click', () => {
+    //     burger.classList.toggle('active')
+    // })
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > document.querySelector('header').offsetHeight - document.querySelector('.top').offsetHeight) document.querySelector('.top').style.background = 'linear-gradient(135deg, #111111, #121222)'
@@ -55,9 +125,10 @@ window.onload = function () {
     }
 
     function filterWorks(query) {
+        allWorks = document.querySelectorAll('.work')
         switch (query) {
-            case 'all': for (let work in allWorks) {
-                allWorks[work].style.display = 'block'
+            case 'all': for (let work of allWorks) {
+                work.style.display = 'block'
             }
                 break;
             case 'easy': for (let work of allWorks) {
