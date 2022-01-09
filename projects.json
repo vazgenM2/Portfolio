@@ -1,0 +1,64 @@
+{
+	"projects": [
+		{
+			"name": "Weather app",
+			"imgSrc": "./imges/weather-app.jpg",
+			"btnLink": "https://github.com/vazgenM2/weather-app",
+			"filter": "medium"
+		},
+		{
+			"name": "Horse Racing Website",
+			"imgSrc": "./imges/horse.jpg",
+			"btnLink": "",
+			"filter": "paid"
+		},
+		{
+			"name": "Slider",
+			"imgSrc": "./imges/slider.jpg",
+			"btnLink": "https://github.com/vazgenM2/slider",
+			"filter": "paid"
+		},
+		{
+			"name": "Quiz Game",
+			"imgSrc": "./imges/quiz.jpg",
+			"btnLink": "https://github.com/vazgenM2/quiz-game",
+			"filter": "dificult"
+		},
+		{
+			"name": "Lucky cards",
+			"imgSrc": "./imges/lucky-cards.jpg",
+			"btnLink": "https://github.com/vazgenM2/lucky-cards",
+			"filter": "paid"
+		},
+		{
+			"name": "Woman's model",
+			"imgSrc": "./imges/woman-body.jpg",
+			"btnLink": "https://github.com/vazgenM2/woman-body-model",
+			"filter": "paid"
+		},
+		{
+			"name": "Todo app in ReactJS",
+			"imgSrc": "./imges/todo.jpg",
+			"btnLink": "https://github.com/vazgenM2/todo-app---react",
+			"filter": "medium"
+		},
+		{
+			"name": "Countdown",
+			"imgSrc": "./imges/countdown.jpg",
+			"btnLink": "https://github.com/vazgenM2/countdown",
+			"filter": "easy"
+		},
+		{
+			"name": "The Chess",
+			"imgSrc": "./imges/chess.png",
+			"btnLink": "https://github.com/vazgenM2/Chess-Game-",
+			"filter": "dificult"
+		},
+		{
+			"name": "5 In A Row (Game)",
+			"imgSrc": "./imges/5inarow.jpg",
+			"btnLink": "https://github.com/vazgenM2/5-in-a-Row",
+			"filter": "easy"
+		}
+	]
+}
